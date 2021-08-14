@@ -1,6 +1,8 @@
 <img src="src/assets/home.png">
 <img src="src/assets/home-scrolled.png">
 
+thanks to => https://developers.themoviedb.org/3/
+
 # Angularflix
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
