@@ -3,9 +3,9 @@
   <div class="header">
     <div class="header__banner"[ngStyle]="
       {
-        'background': 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('+headerBGURL+')'
+        'background-image' : 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('+ headerBGURL + ')'
       }">
-      <h2>TITLE</h2>
+      <h2>{{trending?.results[0].title}}</h2>
 
       <div class="header__buttons"
         
