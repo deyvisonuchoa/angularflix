@@ -10,15 +10,16 @@ const enum endpoint {
   popular = '/movie/popular',
   top_rated = '/movie/top_rated',
   upcoming = '/movie/upcoming',
-  trending = '/movie/trending',
-  originals = '/movie/originals'
+  trending = '/trending/all/week',
+  originals = '/discover/tv'
 }
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
-  private URL = `https//api.themoviedb.org/3`
+  private URL = `https://api.themoviedb.org/3`
   private api_key = environment.api;
 
   constructor(private http: HttpClient) {}

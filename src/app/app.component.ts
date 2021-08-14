@@ -28,11 +28,15 @@ export class AppComponent implements OnInit, OnDestroy{
   };
 
   @ViewChild('stickyHeader') header: ElementRef;
+  headerBGURL: string;
 
   constructor(private movie:MovieService){}
 
   ngOnInit(){
-    this.subs.push(this.movie.getTrendingMovies().subscribe( data => this.trending = data));
+    this.subs.push(this.movie.getTrendingMovies().subscribe( data => {
+      this.trending = data;
+      this.headerBGURL = `https://image.tmdb.org/t/p/original${this.trending.results[0].backdrop_path}`;
+    }));
     this.subs.push(this.movie.getPopularMovies().subscribe( data => this.popular = data));
     this.subs.push(this.movie.getTopRatedMovies().subscribe( data => this.topRated = data));
     this.subs.push(this.movie.getOriginalMovies().subscribe( data => this.originals = data));
