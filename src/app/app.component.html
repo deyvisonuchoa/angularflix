@@ -1,14 +1,14 @@
 <div class="container">
 
   <div class="header">
-    <div class="header__banner"></div>
+    <div class="header__banner"[ngStyle]="
+      {
+        'background': 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3))'
+      }">
       <h2>TITLE</h2>
 
       <div class="header__buttons"
-        [ngStyle]="
-          {
-            'background': 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3))'
-          }"
+        
       >
         <button class="play-button">
           <mat-icon>arrow_right</mat-icon>
@@ -19,6 +19,7 @@
           <span>More info</span>
         </button>
       </div>
+    </div>      
   </div>
 
   <div class="header__main" id="stickyHeader" [class.sticky]="sticky" #stickyHeader>
@@ -41,7 +42,7 @@
         <li class=""><a href="#"><mat-icon>card_giftcard</mat-icon></a></li>
         <li class=""><a href="#"><mat-icon>notifications</mat-icon></a></li>
         <li class="">
-          <img src="https://avatars.githubusercontent.com/u/56098033?v=4" alt="user_avatar">
+          <img src="https://avatars.githubusercontent.com/u/56098033?v=4" style="max-width: 30px;" alt="user_avatar">
         </li>
       </ul>
     </div>
